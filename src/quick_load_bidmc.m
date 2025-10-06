@@ -22,7 +22,7 @@ function [ppg,resp,ekg,fs,meta] = quick_load_bidmc(dataFile)
         
         ppg{i}  = rec.ppg.v(:);
         ekg{i}  = rec.ekg.v(:);
-        resp{i} = rec.ref.resp_sig.imp(:);
+        resp{i} = rec.ref.resp_sig.imp.v(:);
         fs(i)   = rec.ppg.fs;   % usually 125 Hz
         meta{i}     = rec.fix;      % subject ID, location, etc.
     end
